@@ -4,26 +4,77 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>3d визуализация</title>
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  
+    <main class="v3d-page">
+        <section class="v3d-section v3d-hero">
+            <div class="v3d-container">
+                <div class="v3d-grid v3d-hero__grid">
 
-    <div class="site-breadcrumbs-trail__wrap">
-        <nav class="site-breadcrumbs-trail" aria-label="Навигация по сайту">
-            <ol class="site-breadcrumbs-trail__list">
-                <li class="site-breadcrumbs-trail__item">
-                    <a href="/" class="site-breadcrumbs-trail__link">Главная страница</a>
-                </li>
-                <li class="site-breadcrumbs-trail__item site-breadcrumbs-trail__item--current">
-                    <span class="site-breadcrumbs-trail__text">Блог</span>
-                </li>
-            </ol>
-        </nav>
-    </div>
+                    <!-- Контентная часть -->
+                    <div class="v3d-hero__content">
+                        <div class="v3d-hero__header">
+                            <h1 class="v3d-hero__title">
+                                Покажем вашу мебель до&nbsp;её&nbsp;создания
+                            </h1>
+                            <p class="v3d-hero__subtitle">
+                                3D-визуализация поможет вам принять решение о&nbsp;покупке с&nbsp;уверенностью
+                            </p>
+                        </div>
+                        <!-- Список преимуществ -->
+                        <ul class="v3d-hero__benefits">
+                            <li class="v3d-hero__benefit-item">
+                                <div class="v3d-hero__icon-box">
+                                    <img src="./images/icons/1.svg" alt="" class="v3d-hero__icon">
+                                </div>
+                                <p class="v3d-hero__benefit-text">
+                                    <span>Увидите, как мебель выглядит в выбранной ткани — </span> убедитесь, что цвет и
+                                    фактура вам
+                                    подходят
+                                </p>
+                            </li>
+
+                            <li class="v3d-hero__benefit-item">
+                                <div class="v3d-hero__icon-box">
+                                    <img src="./images/icons/2.svg" alt="" class="v3d-hero__icon">
+                                </div>
+                                <p class="v3d-hero__benefit-text"> <span>Рассмотрите фактуру ткани крупным планом —
+                                    </span>
+                                    изучите переплетение нитей и текстуру
+                                    материала в деталях
+                                </p>
+                            </li>
+
+                            <li class="v3d-hero__benefit-item">
+                                <div class="v3d-hero__icon-box">
+                                    <img src="./images/icons/3.svg" alt="" class="v3d-hero__icon">
+                                </div>
+                                <p class="v3d-hero__benefit-text"> <span>Увидите мебель в вашем интерьере — </span>
+                                    оцените, как диван сочетается с вашей обстановкой
+                                    в выбранном оттенке
+                                </p>
+                            </li>
+                        </ul>
+
+                        <a href="" class="v3d-hero__btn v3d-btn">Получить 3D-визуализацию</a>
+                    </div>
+
+                    <!-- Изображение -->
+                    <div class="v3d-hero__image-wrapper">
+                        <img src="./images/v3d-s1.webp" alt="3D визуализация дивана" class="v3d-hero__main-img">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
 </body>
 
 </html>
