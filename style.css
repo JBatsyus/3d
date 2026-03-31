@@ -53,7 +53,7 @@
     padding: 0 20px;
   }
 }
-.v3d-page .v3d-container__h2 {
+.v3d-page .h2 {
   font-family: "ALS Hauss VF", sans-serif;
   font-weight: 400;
   font-size: 44px;
@@ -62,17 +62,17 @@
   margin-bottom: 40px;
 }
 @media (max-width: 1919.98px) {
-  .v3d-page .v3d-container__h2 {
+  .v3d-page .h2 {
     font-size: 42px;
   }
 }
 @media (max-width: 1439.98px) {
-  .v3d-page .v3d-container__h2 {
+  .v3d-page .h2 {
     font-size: 36px;
   }
 }
 @media (max-width: 767.98px) {
-  .v3d-page .v3d-container__h2:has(+ .v3d-container__subtitle) {
+  .v3d-page .h2:has(+ .v3d-container__subtitle) {
     margin-bottom: 24px;
   }
 }
@@ -223,6 +223,10 @@
   font-weight: bold;
 }
 .v3d-hero .v3d-hero__btn {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11111;
+  text-align: center;
   display: inline-block;
   border-radius: 8px;
   padding: 16px 55px;
@@ -233,8 +237,8 @@
 }
 @media (max-width: 767.98px) {
   .v3d-hero .v3d-hero__btn {
-    text-align: center;
     max-width: 100%;
+    font-size: 17px;
   }
 }
 
@@ -386,4 +390,180 @@
     font-size: 16px;
     text-align: center;
   }
+}
+
+.v3d-pricing .v3d-pricing__grid {
+  margin-bottom: 40px;
+}
+.v3d-pricing .v3d-pricing-card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.v3d-pricing .v3d-pricing-card--lite {
+  grid-column: 1/5;
+}
+.v3d-pricing .v3d-pricing-card--pro {
+  grid-column: 5/9;
+}
+.v3d-pricing .v3d-pricing-card--max {
+  grid-column: 9/13;
+}
+.v3d-pricing .v3d-pricing-card__top {
+  display: grid;
+  row-gap: 24px;
+  padding: 32px;
+}
+.v3d-pricing .v3d-pricing-card__header, .v3d-pricing .v3d-pricing-card__price-block {
+  display: grid;
+  row-gap: 8px;
+  text-align: left;
+}
+.v3d-pricing .v3d-pricing-card__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #d19a3a;
+}
+.v3d-pricing .v3d-pricing-card__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #282828;
+}
+.v3d-pricing .v3d-pricing-card__price {
+  font-weight: 400;
+  font-size: 40px;
+}
+.v3d-pricing .v3d-pricing-card__price-note {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.v3d-pricing .v3d-pricing-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px 32px;
+}
+.v3d-pricing .v3d-pricing-card__features {
+  display: grid;
+  row-gap: 12px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.v3d-pricing .v3d-pricing-card__feature {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.v3d-pricing .v3d-pricing-card__feature::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-image: url(./images/icons/bullit.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.v3d-pricing .v3d-pricing-card__time {
+  margin-top: auto;
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.v3d-pricing .v3d-pricing-card__footer {
+  margin-top: auto;
+  padding: 16px 32px 32px 32px;
+}
+.v3d-pricing .v3d-pricing-card__button {
+  text-align: center;
+  display: inline-block;
+  border-radius: 6px;
+  padding-block: 13px;
+  color: #fff;
+  background: #282828;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.125;
+}
+.v3d-pricing .v3d-pricing-card__features-pro-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #c19041;
+}
+.v3d-pricing .v3d-pricing-card__features-pro-label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-image: url(./images/icons/gold-bullit.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.v3d-pricing .v3d-pricing-card__slider {
+  position: relative;
+  cursor: pointer;
+}
+.v3d-pricing .v3d-pricing-card__slider__slide {
+  aspect-ratio: 424/281px;
+}
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev,
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev::after,
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next::after {
+  display: none !important;
+  content: none !important;
+}
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev {
+  left: 12px;
+}
+.v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next {
+  right: 12px;
+}
+.v3d-pricing .v3d-pricing-card__slider svg {
+  height: 16px;
+  object-fit: contain;
+  transform-origin: center;
+  width: 100%;
+  pointer-events: none;
+}
+.v3d-pricing .v3d-pricing-card__slider:hover .v3d-pricing-card__slider-prev,
+.v3d-pricing .v3d-pricing-card__slider:hover .v3d-pricing-card__slider-next {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */

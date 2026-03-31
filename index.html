@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3d визуализация</title>
     <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -72,7 +73,7 @@
         <!-- FEATURES START -->
         <section class="v3d-section v3d-features">
             <div class="v3d-container">
-                <div class="v3d-container__h2">Когда 3D-визуализация помогает с&nbsp;выбором?</div>
+                <h2 class="h2 v3d-features__h2">Когда 3D-визуализация помогает с&nbsp;выбором?</h2>
                 <div class="v3d-container__subtitle">Когда важно?</div>
                 <ul class="v3d-grid v3d-features__grid">
                     <li class="v3d-card">
@@ -122,9 +123,185 @@
             </div>
         </section>
         <!-- FEATURES END -->
+        <!-- PRICING START -->
+        <section class="v3d-section v3d-pricing">
+            <div class="v3d-container">
+                <h2 class="h2 v3d-pricing__h2">Выберите подходящий вариант визуализации</h2>
+                <div class="v3d-grid v3d-pricing__grid">
+                    <!-- Card Lite -->
+                    <article class="v3d-pricing-card v3d-pricing-card--lite">
+                        <div class="v3d-pricing-card__top">
+                            <header class="v3d-pricing-card__header">
+                                <span class="v3d-pricing-card__name">Лайт</span>
+                                <h3 class="v3d-pricing-card__title">Покажем фактуру ткани как на фото</h3>
+                            </header>
 
+                            <div class="v3d-pricing-card__price-block">
+                                <div class="v3d-pricing-card__price">5 000 ₽</div>
+                                <div class="v3d-pricing-card__price-note">Скидка 5 000 ₽ при заказе мебели</div>
+                            </div>
+                        </div>
+
+                        <div class="v3d-pricing-card__slider swiper">
+                            <ul class="v3d-pricing-card__slider-list swiper-wrapper">
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/1.webp" alt="Диван с детализацией ткани"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/2.webp" alt="Фактура ткани крупным планом"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/3.webp" alt="Вариант обивки дивана"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                            </ul>
+                            <div class="v3d-pricing-card__slider-pagination swiper-pagination"></div>
+                            <button class="v3d-pricing-card__slider-prev swiper-button-prev"
+                                aria-label="Предыдущий слайд"></button>
+                            <button class="v3d-pricing-card__slider-next swiper-button-next"
+                                aria-label="Следующий слайд"></button>
+                        </div>
+                        <div class="v3d-pricing-card__body">
+                            <ul class="v3d-pricing-card__features">
+                                <li class="v3d-pricing-card__feature">Стандартная конфигурация мебели</li>
+                                <li class="v3d-pricing-card__feature">5 вариантов материалов обивки</li>
+                                <li class="v3d-pricing-card__feature">5 изображений 5000×5000px</li>
+                                <li class="v3d-pricing-card__feature">Индивудуальный расчет коммерческого предложения
+                                </li>
+                            </ul>
+                            <time class="v3d-pricing-card__time" datetime="P3D">Срок изготовления: 1-3 дня</time>
+                        </div>
+                        <footer class="v3d-pricing-card__footer">
+                            <a href="" class="v3d-pricing-card__button">Заказать</a>
+                        </footer>
+                    </article>
+
+                    <!-- Card Pro -->
+                    <article class="v3d-pricing-card v3d-pricing-card--pro">
+                        <div class="v3d-pricing-card__top">
+                            <header class="v3d-pricing-card__header">
+                                <span class="v3d-pricing-card__name">Про</span>
+                                <h3 class="v3d-pricing-card__title">Подберем комбинацию тканей</h3>
+                            </header>
+                            <div class="v3d-pricing-card__price-block">
+                                <div class="v3d-pricing-card__price">7 500 ₽</div>
+                                <div class="v3d-pricing-card__price-note">Скидка 7 500 ₽ при заказе мебели</div>
+                            </div>
+                        </div>
+                        <div class="v3d-pricing-card__slider swiper">
+                            <ul class="v3d-pricing-card__slider-list swiper-wrapper">
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/2.webp" alt="Фактура ткани крупным планом"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/3.webp" alt="Вариант обивки дивана"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/1.webp" alt="Диван с детализацией ткани"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                            </ul>
+                            <div class="v3d-pricing-card__slider-pagination swiper-pagination"></div>
+                            <button class="v3d-pricing-card__slider-prev swiper-button-prev"
+                                aria-label="Предыдущий слайд"></button>
+                            <button class="v3d-pricing-card__slider-next swiper-button-next"
+                                aria-label="Следующий слайд"></button>
+                        </div>
+                        <div class="v3d-pricing-card__body">
+                            <div class="v3d-pricing-card__features-pro-label">Всё из тарифа Лайт</div>
+                            <ul class="v3d-pricing-card__features">
+                                <li class="v3d-pricing-card__feature">Индивидуальная конфигурация мебели</li>
+                                <li class="v3d-pricing-card__feature">5 комбинаций материалов обивки</li>
+                            </ul>
+                            <time class="v3d-pricing-card__time" datetime="P3D">Срок изготовления: 1-3 дня</time>
+                        </div>
+
+                        <footer class="v3d-pricing-card__footer">
+                            <a href="" class="v3d-pricing-card__button">Заказать</a>
+                        </footer>
+                    </article>
+
+                    <!-- Card Max -->
+                    <article class="v3d-pricing-card v3d-pricing-card--max">
+                        <div class="v3d-pricing-card__top">
+                            <header class="v3d-pricing-card__header">
+                                <span class="v3d-pricing-card__name">Макс</span>
+                                <h3 class="v3d-pricing-card__title">Встроим в ваш интерьер</h3>
+                            </header>
+                            <div class="v3d-pricing-card__price-block">
+                                <div class="v3d-pricing-card__price">10 000 ₽</div>
+                                <div class="v3d-pricing-card__price-note">Скидка 10 000 ₽ при заказе мебели</div>
+                            </div>
+                        </div>
+                        <div class="v3d-pricing-card__slider swiper">
+                            <ul class="v3d-pricing-card__slider-list swiper-wrapper">
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/3.webp" alt="Вариант обивки дивана"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/1.webp" alt="Диван с детализацией ткани"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                                <li class="v3d-pricing-card__slide swiper-slide">
+                                    <img src="./images/pricing/2.webp" alt="Фактура ткани крупным планом"
+                                        class="v3d-pricing-card__img" width="584" height="388" loading="lazy">
+                                </li>
+                            </ul>
+                            <button class="v3d-pricing-card__slider-prev swiper-button-prev"
+                                aria-label="Предыдущий слайд"></button>
+                            <button class="v3d-pricing-card__slider-next swiper-button-next"
+                                aria-label="Следующий слайд"></button>
+                        </div>
+                        <div class="v3d-pricing-card__body">
+                            <div class="v3d-pricing-card__features-pro-label">Всё из тарифа Про</div>
+                            <ul class="v3d-pricing-card__features">
+                                <li class="v3d-pricing-card__feature">Визуализация в вашем интерьере</li>
+                                <li class="v3d-pricing-card__feature">5 вариантов материалов обивки или комбинаций</li>
+                            </ul>
+                            <time class="v3d-pricing-card__time" datetime="P3D">Срок изготовления: 7 дней</time>
+                        </div>
+                        <footer class="v3d-pricing-card__footer">
+                            <a href="" class="v3d-pricing-card__button">Заказать</a>
+                        </footer>
+                    </article>
+                </div>
+                <div class="v3d-pricing__footer">
+                    <div class="v3d-pricing__badge">
+                        <svg class="v3d-pricing__badge-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18Z"
+                                fill="currentColor" />
+                            <path d="M9 14L4.5 9.5L5.91 8.09L9 11.17L14.09 6.08L15.5 7.5L9 14Z" fill="currentColor" />
+                        </svg>
+                        <span class="v3d-pricing__badge-text">Визуализация бесплатно при заказе мебели</span>
+                    </div>
+
+                    <div class="v3d-pricing__badge">
+                        <svg class="v3d-pricing__badge-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18 4H16V3C16 1.9 15.1 1 14 1H6C4.9 1 4 1.9 4 3V4H2C0.9 4 0 4.9 0 6V16C0 17.1 0.9 18 2 18H18C19.1 18 20 17.1 20 16V6C20 4.9 19.1 4 18 4ZM6 3H14V4H6V3ZM18 16H2V6H18V16Z"
+                                fill="currentColor" />
+                            <path
+                                d="M10 8C8.9 8 8 8.9 8 10C8 11.1 8.9 12 10 12C11.1 12 12 11.1 12 10C12 8.9 11.1 8 10 8Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span class="v3d-pricing__badge-text">За каждое дополнительное изображение <strong>+2 400
+                                ₽</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRICING END-->
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
