@@ -549,9 +549,10 @@
     // Слайдер
     .v3d-pricing-card__slider {
         position: relative;
-cursor: pointer;
+        cursor: pointer;
+
         &__slide {
-            
+
             aspect-ratio: 424 /281px;
         }
 
@@ -610,6 +611,56 @@ cursor: pointer;
             }
         }
     }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    &__badge {
+        border-radius: 20px;
+        padding: 20px 40px;
+        background: #f7f7f7;
+        display: flex;
+        gap: 12px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+
+        &:first-child::before {
+            background-image: url(./images/icons/gift-card.svg);
+        }
+
+        &:last-child::before {
+            background-image: url(./images/icons/gift-card-2.svg);
+        }
+
+    }
+
+    &__badge-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.35;
+        text-align: center;
+
+        strong {
+
+            font-weight: bold;
+
+
+        }
+    }
+
 }
 
 // ----------------- PRICING END------------------//

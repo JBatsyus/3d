@@ -566,4 +566,41 @@
 .v3d-pricing .v3d-pricing-card__slider:hover .v3d-pricing-card__slider-next {
   opacity: 1;
   visibility: visible;
+}
+.v3d-pricing__footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.v3d-pricing__badge {
+  border-radius: 20px;
+  padding: 20px 40px;
+  background: #f7f7f7;
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+.v3d-pricing__badge::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.v3d-pricing__badge:first-child::before {
+  background-image: url(./images/icons/gift-card.svg);
+}
+.v3d-pricing__badge:last-child::before {
+  background-image: url(./images/icons/gift-card-2.svg);
+}
+.v3d-pricing__badge-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
+}
+.v3d-pricing__badge-text strong {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
