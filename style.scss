@@ -21,6 +21,10 @@
 
     .v3d-section {
         margin-bottom: 120px;
+
+        @media (max-width: 1439.98px) {
+            margin-bottom: 80px;
+        }
     }
 
     .v3d-container {
@@ -55,6 +59,40 @@
         line-height: 1.1;
         text-align: center;
         margin-bottom: 40px;
+
+
+
+        @media (max-width: 1919.98px) {
+            font-size: 42px;
+        }
+
+        @media (max-width: 1439.98px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:has(+ .v3d-container__subtitle) {
+                margin-bottom: 24px;
+            }
+        }
+
+    }
+
+
+    .v3d-container__subtitle {
+        display: none;
+
+        @media (max-width: 767.98px) {
+            display: block;
+            margin-bottom: 24px;
+
+            font-weight: 400;
+            font-size: 18px;
+
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
     }
 
     .v3d-grid {
@@ -208,6 +246,10 @@
 .v3d-features {
     .v3d-features__grid {
         grid-template-rows: auto;
+
+        @media (max-width: 767.98px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .v3d-card {
@@ -215,6 +257,12 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+
+        @media (max-width: 767.98px) {
+            display: grid;
+            row-gap: 8px;
+
+        }
     }
 
     .v3d-card__figure {
@@ -224,16 +272,68 @@
     .v3d-card:nth-child(1) {
         grid-column: 2/7;
         grid-row: 1;
+
+        .v3d-card__content {
+            max-width: 400px;
+        }
+
+        @media (max-width: 1919.98px) {
+            grid-column: 1/7;
+
+        }
+
+        @media (max-width: 767.98px) {
+            grid-column: -1/1;
+            grid-row: 1;
+
+            .v3d-card__content {
+                max-width: 100%;
+            }
+        }
     }
 
     .v3d-card:nth-child(2) {
         grid-column: 7/12;
         grid-row: 1;
+
+        .v3d-card__content {
+            max-width: 400px;
+        }
+
+        @media (max-width: 1919.98px) {
+            grid-column: 7/13;
+        }
+
+        @media (max-width: 767.98px) {
+            grid-column: -1/1;
+            grid-row: 2;
+
+            .v3d-card__content {
+                max-width: 100%;
+            }
+        }
     }
 
     .v3d-card:nth-child(3) {
         grid-column: 2/12;
         grid-row: 2;
+
+        .v3d-card__content {
+            max-width: 560px;
+        }
+
+        @media (max-width: 1919.98px) {
+            grid-column: 1/13;
+        }
+
+        @media (max-width: 767.98px) {
+            grid-column: -1/1;
+            grid-row: 3;
+
+            .v3d-card__content {
+                max-width: 100%;
+            }
+        }
     }
 
     .v3d-card__content {
@@ -245,18 +345,57 @@
         row-gap: 8px;
         text-align: left;
 
+        @media (max-width: 1239.98px) {
+            left: 24px;
+            bottom: 24px;
+        }
+
+        @media (max-width: 767.98px) {
+            position: static;
+            left: auto;
+            bottom: auto;
+        }
+
         .v3d-card__label {
             font-weight: 400;
             font-size: 16px;
             line-height: 1.4;
             color: #4f4f4f;
+
+            @media (max-width: 1239.98px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 767.98px) {
+                display: none;
+            }
         }
 
         .v3d-card__title {
             font-weight: 400;
             font-size: 28px;
+
+            @media (max-width: 1919.98px) {
+                font-size: 26px;
+            }
+
+            @media (max-width: 1439.98px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 1239.98px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 767.98px) {
+                font-size: 16px;
+                text-align: center;
+            }
+
         }
     }
+
+
 }
 
 // ----------------- ВТОРАЯ СЕКЦИЯ END------------------//
