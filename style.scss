@@ -45,14 +45,43 @@
         @media (max-width: 767.98px) {
             padding: 0 20px;
         }
+    }
 
+    .v3d-container__h2 {
+        font-family: "ALS Hauss VF", sans-serif;
+        font-weight: 400;
+        font-size: 44px;
+
+        line-height: 1.1;
+        text-align: center;
+        margin-bottom: 40px;
     }
 
     .v3d-grid {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 24px;
+    }
+}
 
+// ----------------- ПЕРВАЯ СЕКЦИЯ START------------------//
+.v3d-hero {
+    background: #f7f7f7;
+    padding-block: 40px 80px;
+
+    @media (max-width: 1919.98px) {
+        padding-block: 40px 40px;
+    }
+
+    @media (max-width: 1439.98px) {
+        padding-block: 48px 80px;
+    }
+
+    @media (max-width: 1239.98px) {
+        padding-block: 0px 40px;
+    }
+
+    .v3d-hero__grid {
         @media (max-width: 1239.98px) {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -75,25 +104,6 @@
 
         @media (max-width: 767.98px) {
             font-size: 38px;
-        }
-    }
-
-
-
-    .v3d-hero {
-        background: #f7f7f7;
-        padding-block: 40px 80px;
-
-        @media (max-width: 1919.98px) {
-            padding-block: 40px 40px;
-        }
-
-        @media (max-width: 1439.98px) {
-            padding-block: 48px 80px;
-        }
-
-        @media (max-width: 1239.98px) {
-            padding-block: 0px 40px;
         }
     }
 
@@ -167,7 +177,6 @@
     }
 
     .v3d-hero__benefit-text {
-
         font-weight: 400;
         font-size: 16px;
         line-height: 1.4;
@@ -192,3 +201,62 @@
         }
     }
 }
+
+// ----------------- ПЕРВАЯ СЕКЦИЯ END------------------//
+
+// ----------------- ВТОРАЯ СЕКЦИЯ START------------------//
+.v3d-features {
+    .v3d-features__grid {
+        grid-template-rows: auto;
+    }
+
+    .v3d-card {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .v3d-card__figure {
+        display: grid;
+    }
+
+    .v3d-card:nth-child(1) {
+        grid-column: 2/7;
+        grid-row: 1;
+    }
+
+    .v3d-card:nth-child(2) {
+        grid-column: 7/12;
+        grid-row: 1;
+    }
+
+    .v3d-card:nth-child(3) {
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+
+    .v3d-card__content {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        z-index: 2;
+        display: grid;
+        row-gap: 8px;
+        text-align: left;
+
+        .v3d-card__label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #4f4f4f;
+        }
+
+        .v3d-card__title {
+            font-weight: 400;
+            font-size: 28px;
+        }
+    }
+}
+
+// ----------------- ВТОРАЯ СЕКЦИЯ END------------------//
