@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .v3d-page {
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -72,6 +77,9 @@
   }
 }
 @media (max-width: 767.98px) {
+  .v3d-page .h2 {
+    font-size: 32px;
+  }
   .v3d-page .h2:has(+ .v3d-container__subtitle) {
     margin-bottom: 24px;
   }
@@ -395,12 +403,52 @@
 .v3d-pricing .v3d-pricing__grid {
   margin-bottom: 40px;
 }
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing__grid {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 1239.98px) {
+  .v3d-pricing .v3d-pricing__grid {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .v3d-pricing .v3d-pricing__grid::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing__grid {
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    gap: 24px;
+  }
+}
 .v3d-pricing .v3d-pricing-card {
   background: #f7f7f7;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
+}
+@media (max-width: 1239.98px) {
+  .v3d-pricing .v3d-pricing-card {
+    flex: 0 0 85vw;
+    max-width: 584px;
+    scroll-snap-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    scroll-snap-align: none;
+  }
 }
 .v3d-pricing .v3d-pricing-card--lite {
   grid-column: 1/5;
@@ -416,6 +464,17 @@
   row-gap: 24px;
   padding: 32px;
 }
+@media (max-width: 1439.98px) {
+  .v3d-pricing .v3d-pricing-card__top {
+    padding: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__top {
+    padding: 20px;
+    row-gap: 16px;
+  }
+}
 .v3d-pricing .v3d-pricing-card__header, .v3d-pricing .v3d-pricing-card__price-block {
   display: grid;
   row-gap: 8px;
@@ -427,26 +486,76 @@
   line-height: 1.4;
   color: #d19a3a;
 }
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__name {
+    font-style: 14px;
+  }
+}
 .v3d-pricing .v3d-pricing-card__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.25;
   color: #282828;
 }
+@media (max-width: 1919.98px) {
+  .v3d-pricing .v3d-pricing-card__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .v3d-pricing .v3d-pricing-card__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__title {
+    font-size: 16px;
+  }
+}
 .v3d-pricing .v3d-pricing-card__price {
   font-weight: 400;
   font-size: 40px;
+}
+@media (max-width: 1919.98px) {
+  .v3d-pricing .v3d-pricing-card__price {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .v3d-pricing .v3d-pricing-card__price {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__price {
+    font-size: 28px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__price-note {
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
 }
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__price-note {
+    font-size: 13px;
+  }
+}
 .v3d-pricing .v3d-pricing-card__body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   padding: 24px 32px;
+}
+@media (max-width: 1439.98px) {
+  .v3d-pricing .v3d-pricing-card__body {
+    padding: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__body {
+    padding: 24px 20px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__features {
   display: grid;
@@ -461,6 +570,16 @@
   display: flex;
   align-items: flex-start;
   gap: 8px;
+}
+@media (max-width: 1239.98px) {
+  .v3d-pricing .v3d-pricing-card__feature {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__feature {
+    font-size: 15px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__feature::before {
   content: "";
@@ -478,10 +597,26 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 1.4;
+  color: #282828;
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__time {
+    font-size: 13px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__footer {
   margin-top: auto;
   padding: 16px 32px 32px 32px;
+}
+@media (max-width: 1439.98px) {
+  .v3d-pricing .v3d-pricing-card__footer {
+    padding: 16px 24px 24px 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing .v3d-pricing-card__footer {
+    padding: 8px 20px 20px 20px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__button {
   text-align: center;
@@ -552,8 +687,18 @@
 .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev {
   left: 12px;
 }
+@media (max-width: 1919.98px) {
+  .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev {
+    left: 10px;
+  }
+}
 .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next {
   right: 12px;
+}
+@media (max-width: 1919.98px) {
+  .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next {
+    right: 10px;
+  }
 }
 .v3d-pricing .v3d-pricing-card__slider svg {
   height: 16px;
@@ -572,15 +717,45 @@
   justify-content: center;
   gap: 16px;
 }
+@media (max-width: 1239.98px) {
+  .v3d-pricing__footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
 .v3d-pricing__badge {
   border-radius: 20px;
   padding: 20px 40px;
   background: #f7f7f7;
+}
+@media (max-width: 1239.98px) {
+  .v3d-pricing__badge {
+    width: 100%;
+    justify-items: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-pricing__badge {
+    padding: 20px;
+  }
+}
+.v3d-pricing__badge-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
   display: flex;
   gap: 12px;
   position: relative;
 }
-.v3d-pricing__badge::before {
+@media (max-width: 767.98px) {
+  .v3d-pricing__badge-text {
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+  }
+}
+.v3d-pricing__badge-text::before {
   content: "";
   width: 24px;
   height: 24px;
@@ -589,17 +764,11 @@
   background-size: contain;
   background-position: center;
 }
-.v3d-pricing__badge:first-child::before {
+.v3d-pricing__badge-text--gift::before {
   background-image: url(./images/icons/gift-card.svg);
 }
-.v3d-pricing__badge:last-child::before {
+.v3d-pricing__badge-text--extra::before {
   background-image: url(./images/icons/gift-card-2.svg);
-}
-.v3d-pricing__badge-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.35;
-  text-align: center;
 }
 .v3d-pricing__badge-text strong {
   font-weight: bold;

@@ -6,6 +6,11 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .v3d-page {
     line-height: 1.1;
     letter-spacing: -0.01em;
@@ -69,6 +74,8 @@
         }
 
         @media (max-width: 767.98px) {
+            font-size: 32px;
+
             &:has(+ .v3d-container__subtitle) {
                 margin-bottom: 24px;
             }
@@ -400,6 +407,30 @@
 .v3d-pricing {
     .v3d-pricing__grid {
         margin-bottom: 40px;
+
+        @media (max-width: 767.98px) {
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 1239.98px) {
+            display: flex;
+            // Горизонтальный скролл
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            overflow-x: visible;
+            scroll-snap-type: none;
+            gap: 24px;
+        }
     }
 
     .v3d-pricing-card {
@@ -407,7 +438,20 @@
         border-radius: 12px;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: auto;
+
+        @media (max-width: 1239.98px) {
+            flex: 0 0 85vw;
+            max-width: 584px;
+            scroll-snap-align: center;
+        }
+
+        @media (max-width: 767.98px) {
+            flex: 1 1 auto;
+            width: 100%;
+            max-width: 100%;
+            scroll-snap-align: none;
+        }
 
         &--lite {
             grid-column: 1/5;
@@ -425,6 +469,15 @@
             display: grid;
             row-gap: 24px;
             padding: 32px;
+
+            @media (max-width: 1439.98px) {
+                padding: 24px;
+            }
+
+            @media (max-width: 767.98px) {
+                padding: 20px;
+                row-gap: 16px;
+            }
         }
 
         &__header,
@@ -439,6 +492,10 @@
             font-size: 16px;
             line-height: 1.4;
             color: #d19a3a;
+
+            @media (max-width: 767.98px) {
+                font-style: 14px;
+            }
         }
 
         &__title {
@@ -447,11 +504,35 @@
 
             line-height: 1.25;
             color: #282828;
+
+            @media (max-width: 1919.98px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 1439.98px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 767.98px) {
+                font-size: 16px;
+            }
         }
 
         &__price {
             font-weight: 400;
             font-size: 40px;
+
+            @media (max-width: 1919.98px) {
+                font-size: 34px;
+            }
+
+            @media (max-width: 1439.98px) {
+                font-size: 32px;
+            }
+
+            @media (max-width: 767.98px) {
+                font-size: 28px;
+            }
         }
 
         &__price-note {
@@ -459,6 +540,10 @@
             font-size: 14px;
 
             line-height: 1.4;
+
+            @media (max-width: 767.98px) {
+                font-size: 13px;
+            }
         }
 
         &__body {
@@ -466,6 +551,14 @@
             flex-direction: column;
             flex-grow: 1;
             padding: 24px 32px;
+
+            @media (max-width: 1439.98px) {
+                padding: 24px;
+            }
+
+            @media (max-width: 767.98px) {
+                padding: 24px 20px;
+            }
         }
 
         &__features {
@@ -482,6 +575,14 @@
             display: flex;
             align-items: flex-start;
             gap: 8px;
+
+            @media (max-width: 1239.98px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 767.98px) {
+                font-size: 15px;
+            }
 
             &::before {
                 content: "";
@@ -501,11 +602,24 @@
             font-weight: 300;
             font-size: 14px;
             line-height: 1.4;
+            color: #282828;
+
+            @media (max-width: 767.98px) {
+                font-size: 13px;
+            }
         }
 
         &__footer {
             margin-top: auto;
             padding: 16px 32px 32px 32px;
+
+            @media (max-width: 1439.98px) {
+                padding: 16px 24px 24px 24px;
+            }
+
+            @media (max-width: 767.98px) {
+                padding: 8px 20px 20px 20px;
+            }
         }
 
         &__button {
@@ -552,7 +666,6 @@
         cursor: pointer;
 
         &__slide {
-
             aspect-ratio: 424 /281px;
         }
 
@@ -587,10 +700,18 @@
 
         .v3d-pricing-card__slider-prev {
             left: 12px;
+
+            @media (max-width: 1919.98px) {
+                left: 10px;
+            }
         }
 
         .v3d-pricing-card__slider-next {
             right: 12px;
+
+            @media (max-width: 1919.98px) {
+                right: 10px;
+            }
         }
 
         svg {
@@ -616,15 +737,43 @@
         display: flex;
         justify-content: center;
         gap: 16px;
+
+        @media (max-width: 1239.98px) {
+            flex-direction: column;
+
+            gap: 8px;
+        }
     }
 
     &__badge {
         border-radius: 20px;
         padding: 20px 40px;
         background: #f7f7f7;
+
+        @media (max-width: 1239.98px) {
+            width: 100%;
+            justify-items: center;
+        }
+
+        @media (max-width: 767.98px) {
+            padding: 20px;
+        }
+    }
+
+    &__badge-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.35;
+        text-align: center;
         display: flex;
         gap: 12px;
         position: relative;
+
+        @media (max-width: 767.98px) {
+            align-items: center;
+            text-align: left;
+            font-size: 15px;
+        }
 
         &::before {
             content: "";
@@ -636,31 +785,18 @@
             background-position: center;
         }
 
-
-        &:first-child::before {
+        &--gift::before {
             background-image: url(./images/icons/gift-card.svg);
         }
 
-        &:last-child::before {
+        &--extra::before {
             background-image: url(./images/icons/gift-card-2.svg);
         }
 
-    }
-
-    &__badge-text {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.35;
-        text-align: center;
-
         strong {
-
             font-weight: bold;
-
-
         }
     }
-
 }
 
 // ----------------- PRICING END------------------//
