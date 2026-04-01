@@ -800,3 +800,104 @@ body {
 }
 
 // ----------------- PRICING END------------------//
+// ----------------- EXAMPLES START------------------//
+.v3d-examples {
+    overflow: hidden;
+
+    &__slider {
+        position: relative;
+    }
+
+    .swiper-slide {
+        transition: transform 0.5s ease;
+    }
+
+
+    .v3d-examples-card {
+
+        &__image-box {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &__tags {
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            display: flex;
+            gap: 4px;
+            z-index: 2;
+        }
+
+        &__tag {
+            padding: 6px 8px;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1;
+
+        }
+    }
+
+    .v3d-examples__slider-prev,
+    .v3d-examples__slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+      
+
+        &::after {
+            display: none !important;
+            content: none !important;
+        }
+    }
+
+    .v3d-examples__slider-prev {
+        left: 40px;
+
+        @media (max-width: 1919.98px) {
+            left: 10px;
+        }
+    }
+
+    .v3d-examples__slider-prev {
+        right: 40px;
+
+        @media (max-width: 1919.98px) {
+            right: 10px;
+        }
+    }
+
+    svg {
+        height: 16px;
+        object-fit: contain;
+        transform-origin: center;
+        width: 100%;
+
+        pointer-events: none;
+    }
+
+  
+}
+
+// ----------------- EXAMPLES END------------------//

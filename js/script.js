@@ -22,3 +22,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const examplesSlider = new Swiper('.v3d-examples__slider', {
+   
+    slidesPerView: 1, 
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true,
+    speed: 1500,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    navigation: {
+        nextEl: '.v3d-examples__slider-next',
+        prevEl: '.v3d-examples__slider-prev',
+    },
+
+    // Брейкпоинты для десктопа
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            centeredSlides: false,
+        },
+        1200: {
+            slidesPerView: 3,
+            centeredSlides: false,
+        }
+    }
+});
