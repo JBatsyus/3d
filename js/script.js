@@ -24,11 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const examplesSlider = new Swiper('.v3d-examples__slider', {
-   
-    slidesPerView: 1, 
+slidesPerView: 1.2,
     spaceBetween: 0,
-    centeredSlides: true,
-    loop: true,
+loop: true,
     grabCursor: true,
     speed: 1500,
     autoplay: {
@@ -40,14 +38,12 @@ const examplesSlider = new Swiper('.v3d-examples__slider', {
         nextEl: '.v3d-examples__slider-next',
         prevEl: '.v3d-examples__slider-prev',
     },
-
-    // Брейкпоинты для десктопа
     breakpoints: {
         768: {
             slidesPerView: 2,
             centeredSlides: false,
         },
-        1200: {
+        1240: {
             slidesPerView: 3,
             centeredSlides: false,
         }

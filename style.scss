@@ -806,6 +806,14 @@ body {
 
     &__slider {
         position: relative;
+
+        @media (max-width: 1439.98px) {
+            margin-inline: -100px;
+        }
+
+        @media (max-width: 1239.98px) {
+            margin-inline: 0px;
+        }
     }
 
     .swiper-slide {
@@ -864,28 +872,21 @@ body {
         justify-content: center;
         color: #fff;
 
-      
-
         &::after {
             display: none !important;
             content: none !important;
+        }
+        @media (max-width: 767.98px) {
+            display: none;
         }
     }
 
     .v3d-examples__slider-prev {
         left: 40px;
-
-        @media (max-width: 1919.98px) {
-            left: 10px;
-        }
     }
 
-    .v3d-examples__slider-prev {
+    .v3d-examples__slider-next {
         right: 40px;
-
-        @media (max-width: 1919.98px) {
-            right: 10px;
-        }
     }
 
     svg {
@@ -897,7 +898,7 @@ body {
         pointer-events: none;
     }
 
-  
+
 }
 
 // ----------------- EXAMPLES END------------------//
