@@ -891,11 +891,47 @@ body {
   padding: 80px 60px;
   background: #f7f7f7;
 }
-.v3d-contact__grid {
+@media (max-width: 1919.98px) {
+  .v3d-contact {
+    padding: 80px 0px;
+  }
+}
+@media (max-width: 1239.98px) {
+  .v3d-contact {
+    padding: 40px 0px;
+  }
+}
+.v3d-contact .v3d-contact__grid {
   align-items: center;
+}
+@media (max-width: 1239.98px) {
+  .v3d-contact .v3d-contact__grid {
+    grid-row: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-contact .v3d-contact__grid {
+    grid-template-columns: 1fr;
+  }
 }
 .v3d-contact__media {
   grid-column: 1/9;
+}
+@media (max-width: 1919.98px) {
+  .v3d-contact__media {
+    grid-column: 1/7;
+  }
+}
+@media (max-width: 1239.98px) {
+  .v3d-contact__media {
+    grid-column: 3/11;
+    grid-row: 1;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__media {
+    grid-column: -1/1;
+  }
 }
 .v3d-contact__image-wrap {
   max-width: 1136px;
@@ -904,11 +940,49 @@ body {
   grid-column: 9/13;
   text-align: left;
 }
+@media (max-width: 1919.98px) {
+  .v3d-contact__content {
+    grid-column: 7/13;
+    padding-left: 64px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .v3d-contact__content {
+    padding-left: 28px;
+  }
+}
+@media (max-width: 1239.98px) {
+  .v3d-contact__content {
+    grid-column: 3/11;
+    grid-row: 2;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__content {
+    grid-column: -1/1;
+  }
+}
 .v3d-contact__title {
   font-weight: 400;
   font-size: 40px;
   line-height: 1.1;
   margin-bottom: 16px;
+}
+@media (max-width: 1919.98px) {
+  .v3d-contact__title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .v3d-contact__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__title {
+    font-size: 28px;
+  }
 }
 .v3d-contact__description {
   font-weight: 400;
@@ -916,10 +990,25 @@ body {
   line-height: 1.2;
   margin-bottom: 40px;
 }
+@media (max-width: 1919.98px) {
+  .v3d-contact__description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .v3d-contact__description {
+    font-size: 16px;
+  }
+}
 .v3d-contact__row {
   display: flex;
   gap: 8px;
   margin-bottom: 24px;
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__row {
+    flex-direction: column;
+  }
 }
 .v3d-contact__field {
   flex: 1;
@@ -951,6 +1040,16 @@ body {
   color: #282828;
   margin-bottom: 16px;
 }
+@media (max-width: 1239.98px) {
+  .v3d-contact__label {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__label {
+    font-size: 15px;
+  }
+}
 .v3d-contact__chips {
   display: flex;
   flex-wrap: wrap;
@@ -977,8 +1076,12 @@ body {
   color: #282828;
   transition: color 0.4s;
 }
+@media (max-width: 767.98px) {
+  .v3d-contact__chip-text {
+    font-size: 17px;
+  }
+}
 .v3d-contact__link {
-  font-family: "ALS Hauss VF", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.1875;
@@ -998,6 +1101,11 @@ body {
   line-height: 1.35;
   margin-bottom: 16px;
 }
+@media (max-width: 1239.98px) {
+  .v3d-contact__hint {
+    font-size: 16px;
+  }
+}
 .v3d-contact__social-list {
   display: flex;
   flex-wrap: wrap;
@@ -1016,8 +1124,8 @@ body {
   text-decoration: none;
 }
 .v3d-contact__social-item svg {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   flex-shrink: 0;
   display: block;
   fill: currentColor;
@@ -1030,12 +1138,23 @@ body {
 .v3d-contact__social-item:hover svg {
   fill: #fff;
 }
+.v3d-contact__social-item span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11111;
+  color: #282828;
+}
+@media (max-width: 767.98px) {
+  .v3d-contact__social-item span {
+    font-size: 17px;
+  }
+}
 .v3d-contact__legal {
   font-weight: 300;
   font-size: 12px;
   line-height: 1.33333;
   color: #282828;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   text-underline-offset: 2px;
 }
 .v3d-contact__legal a {
@@ -1045,7 +1164,7 @@ body {
 .v3d-contact__submit {
   width: 100%;
   border-radius: 8px;
-  padding: 8px 55px;
+  padding: 18px 55px;
   background: #cbcbcb;
   color: #fff;
   border: none;
