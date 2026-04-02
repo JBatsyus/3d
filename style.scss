@@ -11,6 +11,12 @@ body {
     width: 100%;
 }
 
+.v3d-contact__input:focus-visible,
+.v3d-contact__chip:focus-within,
+.v3d-contact__social-item:focus-visible {
+    outline: 1px solid #e5e5e5 !important;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -70,7 +76,6 @@ body {
     }
 
     .h2 {
-        font-family: "ALS Hauss VF", sans-serif;
         font-weight: 400;
         font-size: 44px;
 
@@ -118,7 +123,7 @@ body {
     }
 }
 
-// ----------------- ПЕРВАЯ СЕКЦИЯ START------------------//
+// ----------------- HERO START------------------//
 .v3d-hero {
     background: #f7f7f7;
     padding-block: 40px 80px;
@@ -261,9 +266,9 @@ body {
     }
 }
 
-// ----------------- ПЕРВАЯ СЕКЦИЯ END------------------//
+// ----------------- HERO END------------------//
 
-// ----------------- ВТОРАЯ СЕКЦИЯ START------------------//
+// ----------------- FEATURES START------------------//
 .v3d-features {
     .v3d-features__grid {
         grid-template-rows: auto;
@@ -414,7 +419,7 @@ body {
     }
 }
 
-// ----------------- ВТОРАЯ СЕКЦИЯ END------------------//
+// ----------------- FEATURES END------------------//
 
 // ----------------- PRICING START------------------//
 .v3d-pricing {
@@ -427,7 +432,6 @@ body {
 
         @media (max-width: 1239.98px) {
             display: flex;
-            // Горизонтальный скролл
             overflow-x: auto;
             overflow-y: hidden;
             scroll-snap-type: x mandatory;
@@ -700,7 +704,6 @@ body {
             justify-content: center;
             color: #fff;
 
-            // Скрытие до ховера
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s ease-in-out;
@@ -912,20 +915,6 @@ body {
 
 // ----------------- EXAMPLES END------------------//
 // ----------------- FORM START------------------//
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 .v3d-contact {
     padding: 80px 60px;
     background: #f7f7f7;
@@ -1114,7 +1103,7 @@ body {
             font-size: 18px;
             line-height: 1.11;
             color: #282828;
-            transition: color 0.4s;
+            transition: color 0.4s ease-in-out;
 
             @media (max-width: 767.98px) {
                 font-size: 17px;
@@ -1296,10 +1285,7 @@ body {
             z-index: 2;
 
             pointer-events: none;
-
         }
-
-
 
         &__title {
             display: flex;
@@ -1328,7 +1314,7 @@ body {
                 display: inline-block;
                 width: 8px;
                 height: 12px;
-                background-image: url('./images/icons/arrow-l.svg');
+                background-image: url("./images/icons/arrow-l.svg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 margin-top: 4px;
@@ -1338,9 +1324,7 @@ body {
                     height: 10px;
                 }
             }
-
         }
-
 
         &__description {
             font-weight: 300;
@@ -1351,7 +1335,6 @@ body {
 
             @media (max-width: 1239.98px) {
                 font-size: 15px;
-
             }
 
             @media (max-width: 767.98px) {
@@ -1371,7 +1354,6 @@ body {
                 object-fit: cover;
             }
         }
-
     }
 
     .v3d-help-card:nth-child(1) {
@@ -1416,6 +1398,5 @@ body {
         }
     }
 }
-
 
 // ----------------- HELP END------------------//
