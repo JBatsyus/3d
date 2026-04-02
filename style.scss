@@ -1089,8 +1089,7 @@ body {
         background: #fff;
         transition: background 0.4s ease-in-out;
 
-        &:hover,
-        &:has(.v3d-contact__real-radio:checked) {
+        &:hover {
             background: #282828;
 
             .v3d-contact__chip-text {

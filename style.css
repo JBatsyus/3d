@@ -1055,10 +1055,10 @@ body {
   background: #fff;
   transition: background 0.4s ease-in-out;
 }
-.v3d-contact__chip:hover, .v3d-contact__chip:has(.v3d-contact__real-radio:checked) {
+.v3d-contact__chip:hover {
   background: #282828;
 }
-.v3d-contact__chip:hover .v3d-contact__chip-text, .v3d-contact__chip:has(.v3d-contact__real-radio:checked) .v3d-contact__chip-text {
+.v3d-contact__chip:hover .v3d-contact__chip-text {
   color: #fff;
 }
 .v3d-contact__chip-text {
