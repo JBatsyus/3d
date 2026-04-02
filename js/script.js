@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const examplesSlider = new Swiper('.v3d-examples__slider', {
-slidesPerView: 1.2,
+    slidesPerView: 1.2,
     spaceBetween: 0,
-loop: true,
+    loop: true,
     grabCursor: true,
     speed: 1500,
     autoplay: {

@@ -674,7 +674,7 @@ body {
   cursor: pointer;
 }
 .v3d-pricing .v3d-pricing-card__slider__slide {
-  aspect-ratio: 424/281px;
+  aspect-ratio: 424/281;
 }
 .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-prev,
 .v3d-pricing .v3d-pricing-card__slider .v3d-pricing-card__slider-next {
